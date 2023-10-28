@@ -1,0 +1,38 @@
+
+.logout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUoR02RH0UgUu4TpXUE1HyJcbCf8AjkXJK-Q&usqp=CAU'); 
+    background-size: 500px;
+    background-position: right;
+    background-repeat: no-repeat;
+    color: rgb(0, 3, 11); /* Text color */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .logout-container h2 {
+    font-size: 34px;
+  }
+  
+  .logout-container p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .logout-container button {
+    background-color: #007BFF; 
+    color: rgb(255, 255, 255); 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .logout-container button:hover {
+    background-color: #0056b3; 
+  }
+  
