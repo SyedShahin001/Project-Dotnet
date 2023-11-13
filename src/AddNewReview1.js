@@ -1,7 +1,11 @@
+//user review page
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import React from "react";
+import Navbar from "./Navbar";
+//import Navbar from "./Navbar";  
 
 const colors = {
   orange: "#FFBA5A",
@@ -103,6 +107,7 @@ function AddNewReview1() {
   }
 
   return (
+    
     <div
       style={{
         display: "flex",
@@ -113,6 +118,9 @@ function AddNewReview1() {
         position: "relative", 
       }}
     >
+      <Navbar/>
+      
+      
       <div className="form-group row">
         <h2>Review Details</h2>
         {isError && (
@@ -213,9 +221,6 @@ function AddNewReview1() {
           }}
         />
       </div>
-      <button style={{ position: "absolute", top: "50px", left: "60px" }}>
-        <Link to="/Navbar">Back</Link>
-      </button>
     </div>
   );
 }

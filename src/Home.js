@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
+import { GoogleLogin } from 'react-google-login';
 import './Home.css';
 
 function App() {
   const [emailAddress, setEmailAddress] = useState('');
   const [password, setPassword] = useState('');
   const [loginMessage, setLoginMessage] = useState('');
+  const responseGoogle = (response) => {
+    console.log(response);
+    
+  };
+
+  const onFailure = (error) => {
+    console.error(error);
+  };
 
   const navigate = useNavigate(); 
   const handleLogin = async () => {
@@ -28,11 +37,11 @@ function App() {
         if (isAdmin) {
           // Store the email address in localStorage or a state management solution
           localStorage.setItem('loggedInEmail', emailAddress);
-          window.location.href = '/NavbarA'; 
+          window.location.href = '/HomeAdmin'; 
         } else if (isUser) {
           // Store the email address in localStorage or a state management solution
           localStorage.setItem('loggedInEmail', emailAddress);
-          window.location.href = '/Navbar'; 
+          window.location.href = '/HomeUser'; 
         } else {
           setLoginMessage('Invalid email or password');
         }
@@ -75,8 +84,19 @@ function App() {
           <button onClick={handleLogin}>Login</button>
           <button onClick={handleRegisterClick}>Register</button> 
         </div>
-        <p>{loginMessage}</p>
+        <p>{loginMessage}</p> 
+        <p>or</p>
+        <div>
+      <GoogleLogin
+        clientId="684298910357-2nbje25q3k0pkmmolkqd58lot0bu5ogj.apps.googleusercontent.com"
+        buttonText="Login with Google"
+        onSuccess={responseGoogle}
+        onFailure={onFailure}
+        cookiePolicy={'single_host_origin'}
+      />
+    </div>
       </div>
+     
     </div>
   );
 }

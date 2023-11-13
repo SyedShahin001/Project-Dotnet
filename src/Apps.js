@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link,  useNavigate } from "react-router-dom";
+import NavbarA from "./NavbarA";
 
 
 
@@ -23,6 +24,7 @@ export function Apps() {
 
   return (
     <div>
+      <NavbarA />
       <h3 style={{ textAlign: "center" }}>Apps Details</h3>
       <div
         style={{
@@ -39,10 +41,11 @@ export function Apps() {
               backgroundColor: "lavender",
               color: "brown",
               width: "200px",
-              margin: "10px",
+              margin: "15px",
               padding: "6px",
               boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
               borderRadius: "8px",
+              marginTop: "70px",
             }}
           >
             <h5>AppId: {item.appId}</h5>
@@ -51,11 +54,7 @@ export function Apps() {
           </div>
         ))}
       </div>
-      <div >
-      <button style={{ position: "absolute", top: "20px", left: "40px" }}>
-          <Link to="/NavbarA">Back</Link>
-        </button>
-      </div>
+
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import NavbarA from "./NavbarA";
 
 export function AddNewApp() {
   const [appName, setAppName] = useState("");
@@ -75,7 +76,9 @@ export function AddNewApp() {
   }
 
   return (
+   
     <div className="container text-center mt-5">
+      <NavbarA />
       <h2>App Details</h2>
       {renderAlert()}
       <form onSubmit={handleSubmit}>
@@ -110,9 +113,11 @@ export function AddNewApp() {
     marginTop: '80px'
   }}
 />
-<button style= {{ position: "absolute", top: "50px", left:"60px"}}><Link to="/NavbarA">Back</Link></button>
+
     </div>
   );
 }
 
 export default AddNewApp;
+
+/*<button style= {{ position: "absolute", top: "50px", left:"60px"}}><Link to="/NavbarA">Back</Link></button>*/

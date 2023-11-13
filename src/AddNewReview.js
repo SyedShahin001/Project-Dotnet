@@ -1,11 +1,14 @@
+//Admin Review page
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import React from "react";
+import NavbarA from "./NavbarA";
 
 const colors = {
   orange: "#FFBA5A",
-  grey: "#a9a9a9"
+  grey: "#a9a9a9"  
 }
 
 function AddNewReview() {
@@ -109,6 +112,7 @@ function AddNewReview() {
         position: "relative", 
       }}
     >
+      <NavbarA />
       <div className="form-group row">
  <h2>Review Details</h2>
         {isError && (
@@ -210,7 +214,7 @@ function AddNewReview() {
   }}
 />
       </div>
-      <button style= {{ position: "absolute", top: "50px", left:"60px"}}><Link to="/NavbarA">Back</Link></button>
+  
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import NavbarA from './NavbarA';
 
 export function Review() {
   const [apps, setApps] = useState([]);
@@ -28,29 +29,27 @@ export function Review() {
     justifyContent: "center",
   }}
 >
+<NavbarA />
   {apps.map((item, i) => (
     <div
-      key={i}
-      style={{
-        border: "4px solid pink",
-        backgroundColor: "lavender",
-        color: "brown",
-        width: "200px",
-        margin: "10px",
-        padding: "6px",
-        boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-        borderRadius: "8px",
-      }}
-    >
+  key={i}
+  style={{
+    border: "4px solid pink",
+    backgroundColor: "lavender",
+    color: "brown",
+    width: "200px",
+    margin: "10px",
+    padding: "6px",
+    boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+    borderRadius: "8px",
+    marginTop: "70px", // Adding space at the top
+  }}
+>
       <h5>AppName: {item.appName}</h5>
       <p>Number_of_Reviews: {item.number_of_reviews}</p> 
     </div>
   ))}
-        <div >
-      <button style={{ position: "absolute", top: "20px", left: "40px" }}>
-          <Link to="/NavbarA">Back</Link>
-        </button>
-      </div>
+    
 </div>
 
   );

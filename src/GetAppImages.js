@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 import WApp from "../src/Images/WApp.jpeg";
 import oyo from "../src/Images/oyo.png";
 import nyka from "../src/Images/nyka.jpg";
@@ -7,6 +8,7 @@ import fc1 from "../src/Images/fc1.jpeg";
 import ama from "../src/Images/ama.jpeg";
 import reliance from "../src/Images/reliance.png";
 import telegram from "../src/Images/telegram.jpeg";
+
 
 // add images
 const importedImages = [WApp, oyo, nyka, fc1, ama, reliance,telegram];
@@ -31,13 +33,14 @@ function GetAppImages() {
 
   return (
     <div>
+      <Navbar />
       <div
         style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center", 
           textAlign: "center", 
-          margin: "20px 0", 
+          margin: "70px 0", 
         }}
       >
         <h3>We Value Your Feedback</h3>
@@ -95,11 +98,7 @@ function GetAppImages() {
         ))}
       </div>
 
-      <div>
-        <button style={{ position: "absolute", top: "20px", left: "40px" }}>
-          <Link to="/Navbar">Back</Link>
-        </button>
-      </div>
+
     </div>
   );
 }

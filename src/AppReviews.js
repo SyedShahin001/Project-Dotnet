@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import NavbarA from './NavbarA';
 
 export function AppReviews() {
   const [appName, setAppName] = useState('');
@@ -49,6 +50,7 @@ export function AppReviews() {
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100">
+      <NavbarA />
       <div>
         <form onSubmit={handleSubmit}>
           <label>
@@ -102,9 +104,9 @@ export function AppReviews() {
     marginTop: "80px"
   }}
 />
-<button style= {{ position: "absolute", top: "50px", left:"60px"}}><Link to="/">Back</Link></button>
+
       </div>
-      <button style= {{ position: "absolute", top: "50px", left:"60px"}}><Link to="/NavbarA">Back</Link></button>
+     
     </div>
   );
 }

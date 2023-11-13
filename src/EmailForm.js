@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Link } from "react-router-dom";
+import NavbarA from './NavbarA';
 
 export function EmailForm() {
   const [email, setEmail] = useState('');
@@ -26,7 +27,14 @@ export function EmailForm() {
   };
 
   return (
-<div style={{ position: 'absolute', top: '20%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', width: '100%' }}>
+<div
+      style={{
+        textAlign: 'center',
+        width: '100%',
+        marginTop: '80px',
+      }}
+    >
+    <NavbarA />
   <form onSubmit={handleSubmit}>
     <label>
       Email:
@@ -54,7 +62,7 @@ export function EmailForm() {
       ))}
     </tbody>
   </table>
-  <button style= {{ position: "absolute", top: "30px", left:"60px"}}><Link to="/NavbarA">Back</Link></button>
+
 </div>
 
   );
