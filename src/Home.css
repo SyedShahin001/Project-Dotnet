@@ -1,0 +1,58 @@
+/* Home.css */
+
+.error-message {
+  color: red;
+  margin-top: 5px; /* Optional: Add some space above the error message */
+}
+
+
+.login-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToQw8uenU7RkU2HgVwDvEkhijzFhVtOTHvRg&usqp=CAU'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center;
+}
+
+.login-column {
+  text-align: center;
+  padding: 75px 200px; 
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.login-column > h2 {
+  margin-bottom: 20px; 
+}
+
+.login-column > div {
+  margin-bottom: 10px; 
+}
+
+.login-column > div > input[type="emailAddress"],
+.login-column > div > input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px; 
+}
+
+.login-column > div > button {
+  width: 150%;
+  padding: 10px;
+  margin-bottom: 10px; 
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-column > div > button:last-child {
+  margin-bottom: 0; 
+}
+
+.login-column > div > button:hover {
+  background-color: #0056b3;
+}
