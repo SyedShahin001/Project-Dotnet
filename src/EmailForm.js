@@ -15,7 +15,12 @@ export function EmailForm() {
  
     const fetchEmailOptions = async () => {
       try {
-        const response = await fetch(`https://localhost:7177/api/Review/FetchAllEmails`);
+        const response = await fetch(`https://localhost:7177/api/Review/FetchAllEmails` ,{
+          headers:{
+            Authorization:`Bearer ${localStorage.getItem('token')}`,
+
+          }
+        });
         const jsonData = await response.json();
         setEmailOptions(jsonData);
       } catch (error) {

@@ -10,7 +10,11 @@ export function Apps() {
 
   const fetchApps = async () => {
     try {
-      const response = await fetch('https://localhost:7177/api/App/GetAllApps');
+      const response = await fetch('https://localhost:7177/api/App/GetAllApps',{
+        headers:{
+          Authorization:`Bearer ${localStorage.getItem('token')}`,
+        }
+      });
       const jsonData = await response.json();
       setApps(jsonData);
     } catch (error) {

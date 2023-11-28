@@ -42,10 +42,11 @@ function App() {
         }
       })
       
-
+     // sessionStorage.setItem("token",res)
       res =await res.json()
       console.warn("result",res)
       console.log(res.status);
+      localStorage.setItem('token',res);
 
       localStorage.setItem("IsLoggedIn",res.status)
 
